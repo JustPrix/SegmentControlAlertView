@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtFieldA: UITextField!
     @IBOutlet weak var txtFieldB: UITextField!
     
-    //let a = ((Int)())!
-    
     
     
     override func viewDidLoad() {
@@ -28,7 +26,29 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func sgtControlAction(_ sender: Any) {
+    @IBAction func sgtControlAction(_ sender: UISegmentedControl) {
+        
+        let a = ((Int)(txtFieldA.text!))!
+        let b = ((Int)(txtFieldB.text!))!
+        var c = 0
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            c = a + b
+        case 1:
+            c = a - b
+        case 2:
+            c = a * b
+        case 3:
+            c = a / b
+        default:
+            print("Nothing is selected")
+        }
+        
+        let alertAnswer = UIAlertController(title: "Answer", message: "A = \(a) B = \(b) Result = \(c)", preferredStyle: .alert)
+        self.present(alertAnswer, animated: true, completion: nil)
+        
+        
     }
     
     
