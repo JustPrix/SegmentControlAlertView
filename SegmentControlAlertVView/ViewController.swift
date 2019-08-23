@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //outlets
+    @IBOutlet weak var txtFieldA: UITextField!
+    @IBOutlet weak var txtFieldB: UITextField!
+    
+    //let a = ((Int)())!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +28,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func sgtControlAction(_ sender: Any) {
+    }
+    
+    
+    
+    
 }
 
