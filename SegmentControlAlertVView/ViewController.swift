@@ -48,6 +48,9 @@ class ViewController: UIViewController {
         let alertAnswer = UIAlertController(title: "Answer", message: "A = \(a) B = \(b) Result = \(c)", preferredStyle: .alert)
         self.present(alertAnswer, animated: true, completion: nil)
         
+        let resignAlert = UIAlertAction(title: "Cancel", style: .cancel)
+        //self.dismiss(animated: true, completion: nil)
+        alertAnswer.addAction(resignAlert)
         
     }
     
